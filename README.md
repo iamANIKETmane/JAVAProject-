@@ -1,22 +1,77 @@
 # 🧭 Real-Time Data Visualization Dashboard
 
-A **Spring Boot 3.2 (Java 21)** web application for **real-time analytics, visualization, and monitoring**.  
-It features a live dashboard powered by WebSockets, REST APIs, and dynamic front-end charts built with **Chart.js**, **Bootstrap 5**, and **Thymeleaf**.
+A **Spring Boot 3.2 (Java 21)** enterprise-grade web application for **real-time analytics, visualization, and monitoring**.  
+Features a live dashboard powered by WebSockets, REST APIs, and dynamic front-end charts built with **Chart.js**, **Bootstrap 5**, and **Thymeleaf**.
 
 ---
 
-## 🌟 Features
+## 🌟 Key Features
 
 - 🔄 **Real-time updates** using WebSocket / STOMP (SockJS fallback)
-- 📈 **Interactive charts** (trend, bar, pie, area, gauge, heatmap)
-- 🧮 **Live analytics** — average, std. dev, min/max, hourly and category-wise aggregation
-- 🧰 **Data management UI** (CRUD, CSV import/export)
-- 🗃️ **Persistence layer** with Spring Data JPA (H2 dev / MySQL prod)
-- 🕹️ **Configurable layout** stored in the database
-- 🧠 **Statistics, controls, and filters** for categories, ranges, and aggregations
-- 🎨 **Responsive UI** with Bootstrap 5, custom CSS, dark-mode, and animations
-- ⚙️ **Actuator endpoints** (`/actuator/health`, `/actuator/metrics`)
-- 🧭 **Thymeleaf templates** for pages: `/dashboard`, `/charts`, `/data`, `/settings`, `/about`
+- 📈 **Interactive charts** (line, bar, pie, area, gauge, heatmap, trend analysis)
+- 🧮 **Live analytics** — average, standard deviation, min/max, hourly and category-wise aggregation
+- 🧰 **Data management UI** with full CRUD operations, filtering, and search
+- 🗃️ **Persistence layer** with Spring Data JPA (H2 development / MySQL production)
+- 🕹️ **Configurable dashboards** with multiple visualization types
+- 🧠 **Advanced statistics** with real-time calculations and trend detection
+- 🎨 **Responsive UI** with Bootstrap 5, custom CSS, and professional animations
+- ⚙️ **Actuator endpoints** for health monitoring and metrics
+- 🧭 **Multi-page application** with dedicated views for Dashboard, Charts, and Data Management
+
+---
+
+## 📊 Dashboard Data Overview
+
+The application automatically loads **comprehensive test data** on startup to demonstrate its full capabilities. The dashboard displays real-time metrics across multiple business domains:
+
+### Data Categories
+
+| Category | Metrics | Time Span | Update Frequency |
+|:---------|:--------|:----------|:-----------------|
+| **Sales** | Hourly Revenue ($) | Last 24 hours | Hourly |
+| **Orders** | Order Count | Last 24 hours | Hourly |
+| **Website Traffic** | Page Views, Unique Visitors, Bounce Rate (%) | Last 24 hours | Every 2 hours |
+| **Server Performance** | CPU Usage (%), Memory Usage (%), Response Time (ms) | Last 24 hours | Hourly |
+| **User Engagement** | Active Users, Session Duration (min), Conversion Rate (%) | Last 7 days | Daily |
+| **Network Traffic** | Bandwidth Usage (Mbps), Request Count | Last 24 hours | Every 3 hours |
+| **Revenue** | Sales by Product Category (Electronics, Clothing, Books, Home & Garden, Sports) | Last 7 days | Daily |
+| **Customer Satisfaction** | NPS Score, Support Tickets | Last 30 days | Every 3 days |
+
+### Initial Dataset Statistics
+- **Total Data Points**: 334+ records loaded on startup
+- **Time Range**: Last 30 days of historical data
+- **Categories**: 8 distinct business metrics categories
+- **Real-time Generation**: Continuous data generation every 5 seconds after startup
+- **Data Sources**: E-commerce Platform, Web Analytics, Monitoring, CRM, Network Monitoring, Sales System, Customer Feedback
+
+### Sample Dashboard Views
+
+The dashboard provides three main pages:
+
+1. **Main Dashboard** (`/dashboard`)
+   - Real-time statistics cards (Total Data Points, Active Categories, Real-Time Updates)
+   - Live trend chart with WebSocket updates
+   - Category-wise distribution visualization
+   - System status monitoring
+
+2. **Advanced Charts** (`/charts`)
+   - Primary interactive chart with zoom controls
+   - Distribution analysis (pie/doughnut charts)
+   - Comparison charts for category analysis
+   - Trend detection and forecasting
+   - Heatmap visualization
+   - Gauge charts for KPIs
+   - Filters: Chart Type, Category, Time Range, Aggregation Method
+
+3. **Data Management** (`/data`)
+   - Comprehensive data table with pagination
+   - CRUD operations (Create, Read, Update, Delete)
+   - Advanced filtering and search
+   - Bulk data generation
+   - JSON export/import functionality
+   - Real-time statistics dashboard
+
+**Note**: Screenshots can be inserted below to showcase the actual dashboard interface.
 
 ---
 
@@ -174,7 +229,65 @@ Front-end stack includes:
 
 ---
 
+## 📸 Application Screenshots
+
+### Main Dashboard
+![Dashboard Overview](screenshots/dashboard.png)
+*Real-time analytics dashboard showing live metrics, trend charts, and system status indicators.*
+
+### Advanced Charts View
+![Charts Page](screenshots/charts.png)
+*Interactive visualization tools with multiple chart types, filters, and zoom controls.*
+
+### Data Management Interface
+![Data Management](screenshots/data-management.png)
+*Comprehensive data management page with table view, CRUD operations, and filtering capabilities.*
+
+---
+
+## 🔧 Technical Implementation Details
+
+### Architecture
+- **Backend**: RESTful APIs with Spring Boot 3.2
+- **WebSocket**: STOMP over SockJS for real-time bi-directional communication
+- **Database**: JPA/Hibernate with H2 (dev) and MySQL (production) support
+- **Frontend**: Server-side rendering with Thymeleaf + client-side JavaScript
+
+### Key Components
+1. **DataInitializer**: Loads 334+ test data points on startup spanning 30 days
+2. **DataGeneratorService**: Scheduled service generating new data every 5 seconds
+3. **WebSocketConfig**: Configures STOMP messaging with fallback support
+4. **DataPointService**: Business logic layer handling data operations and WebSocket broadcasts
+5. **RealTimeDashboard (JS)**: Client-side class managing WebSocket connections and chart updates
+
+### Database Schema
+- **data_points**: Main table storing time-series data with category, value, timestamp, unit, source, and metadata
+- **dashboards**: Stores dashboard configurations and layouts
+- **charts**: Stores individual chart configurations
+
+---
+
+## 🚀 Future Enhancements
+
+- 🔐 User authentication and role-based access control
+- 📧 Email/SMS alerts for threshold violations
+- 📱 Mobile-responsive progressive web app (PWA)
+- 🌐 Multi-language support (i18n)
+- 📊 Advanced ML-based forecasting and anomaly detection
+- 💾 Support for additional databases (PostgreSQL, MongoDB)
+- 🔄 Data streaming from external sources (Kafka, RabbitMQ)
+- 📈 Custom dashboard builder with drag-and-drop widgets
+
+---
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
+
+---
+
 ## 👨‍💻 Authors
+
 **Aniket Mane**  
 [GitHub Profile](https://github.com/iamANIKETmane)
 
@@ -182,5 +295,17 @@ Front-end stack includes:
 [GitHub Profile](https://github.com/aneeshKm)
 
 **Princy Doshi**  
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/iamANIKETmane/JAVAProject-/issues).
+
+---
+
+## ⭐ Show Your Support
+
+If you find this project useful, please consider giving it a star on GitHub!
 
 ---

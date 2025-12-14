@@ -15,18 +15,8 @@ class AdvancedCharts {
         };
         this.statistics = {};
         
-        // Initialize when dashboard is ready
-        if (window.dashboard && window.dashboard.isConnected) {
-            this.init();
-        } else {
-            // Wait for dashboard to be ready
-            const checkDashboard = setInterval(() => {
-                if (window.dashboard && window.dashboard.isConnected) {
-                    clearInterval(checkDashboard);
-                    this.init();
-                }
-            }, 100);
-        }
+        // Initialize immediately - don't wait for dashboard
+        this.init();
     }
     
     init() {

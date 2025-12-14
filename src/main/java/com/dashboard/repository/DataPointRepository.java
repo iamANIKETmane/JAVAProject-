@@ -73,17 +73,17 @@ public interface DataPointRepository extends JpaRepository<DataPoint, Long> {
     /**
      * Get hourly aggregated data for a category
      */
-    @Query("SELECT " +
-           "FUNCTION('DATE_FORMAT', d.timestamp, '%Y-%m-%d %H:00:00') as hour, " +
-           "AVG(d.value) as avgValue, " +
-           "MIN(d.value) as minValue, " +
-           "MAX(d.value) as maxValue, " +
-           "COUNT(d) as count " +
-           "FROM DataPoint d " +
-           "WHERE d.category = :category " +
-           "AND d.timestamp >= :startTime " +
-           "GROUP BY FUNCTION('DATE_FORMAT', d.timestamp, '%Y-%m-%d %H:00:00') " +
-           "ORDER BY hour")
+    @Query(value = "SELECT " +
+           "FORMATDATETIME(timestamp, 'yyyy-MM-dd HH:00:00') as hour, " +
+           "AVG(\"value\") as avgValue, " +
+           "MIN(\"value\") as minValue, " +
+           "MAX(\"value\") as maxValue, " +
+           "COUNT(*) as count " +
+           "FROM data_points " +
+           "WHERE category = :category " +
+           "AND timestamp >= :startTime " +
+           "GROUP BY FORMATDATETIME(timestamp, 'yyyy-MM-dd HH:00:00') " +
+           "ORDER BY hour", nativeQuery = true)
     List<Object[]> getHourlyAggregatedData(@Param("category") String category, 
                                           @Param("startTime") LocalDateTime startTime);
     

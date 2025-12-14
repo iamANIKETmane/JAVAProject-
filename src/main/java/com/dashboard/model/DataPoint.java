@@ -30,7 +30,7 @@ public class DataPoint {
     
     @NotNull(message = "Value is required")
     @Positive(message = "Value must be positive")
-    @Column(nullable = false)
+    @Column(name = "`value`", nullable = false)
     private Double value;
     
     @NotBlank(message = "Label is required")
