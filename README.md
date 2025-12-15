@@ -238,23 +238,7 @@ Watch the complete walkthrough and live demonstration:
 *📹 2-minute demo showcasing real-time updates, interactive charts, and data management features*
 
 
----
 
-## 📸 Application Screenshots
-
-### Main Dashboard
-![Dashboard Overview](screenshots/dashboard.png)
-*Real-time analytics dashboard showing live metrics, trend charts, and system status indicators.*
-
-### Advanced Charts View
-![Charts Page](screenshots/charts.png)
-*Interactive visualization tools with multiple chart types, filters, and zoom controls.*
-
-### Data Management Interface
-![Data Management](screenshots/data-management.png)
-*Comprehensive data management page with table view, CRUD operations, and filtering capabilities.*
-
----
 
 ## 🔧 Technical Implementation Details
 
