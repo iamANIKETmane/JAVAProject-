@@ -233,7 +233,7 @@ Front-end stack includes:
 
 Watch the complete walkthrough and live demonstration:
 
-[![Demo Video](https://drive.google.com/file/d/1ah_8b0JLTNpiKmLxSAMK64tNUPdJH8SQ/view?usp=drive_link)
+[![Demo Video](https://drive.google.com/file/d/1ah_8b0JLTNpiKmLxSAMK64tNUPdJH8SQ/view?usp=drive_link)]
 
 *📹 2-minute demo showcasing real-time updates, interactive charts, and data management features*
 
