@@ -229,6 +229,17 @@ Front-end stack includes:
 
 ---
 
+## 🎥 Demo Video
+
+Watch the complete walkthrough and live demonstration:
+
+[![Demo Video](https://drive.google.com/file/d/1ah_8b0JLTNpiKmLxSAMK64tNUPdJH8SQ/view?usp=drive_link)
+
+*📹 2-minute demo showcasing real-time updates, interactive charts, and data management features*
+
+
+---
+
 ## 📸 Application Screenshots
 
 ### Main Dashboard
@@ -267,7 +278,7 @@ Front-end stack includes:
 
 ---
 
-## 🚀 Future Enhancements
+## Future Enhancements
 
 - 🔐 User authentication and role-based access control
 - 📧 Email/SMS alerts for threshold violations
@@ -278,15 +289,9 @@ Front-end stack includes:
 - 🔄 Data streaming from external sources (Kafka, RabbitMQ)
 - 📈 Custom dashboard builder with drag-and-drop widgets
 
----
 
-## 📄 License
 
-This project is open-source and available under the MIT License.
-
----
-
-## 👨‍💻 Authors
+## Authors
 
 **Aniket Mane**  
 [GitHub Profile](https://github.com/iamANIKETmane)
@@ -296,16 +301,4 @@ This project is open-source and available under the MIT License.
 
 **Princy Doshi**  
 
----
 
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/iamANIKETmane/JAVAProject-/issues).
-
----
-
-## ⭐ Show Your Support
-
-If you find this project useful, please consider giving it a star on GitHub!
-
----
